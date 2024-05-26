@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TelaTeste.css"/>
+    <title>Guia JK</title>
+</head>
+<body>
+<nav>
+    <p id="guia">Guia</p>
+    <h1 id="jk">JK</h1>
+    <div class="dropdown dropdown1">
+        <img id="imgPerfil" src="data:image/png"/>
+        <div class="dropdown-content">
+            <div class="btn"><p id="pf"><a href="Telalogin.php">Login</a></p></div>
+            <div class="btn"><p id="pf"><a href="TelaCadastro.php">Cadastrar-se</a></p></div>
+            <section id="secdd">
+                <p id="pi">Entrar como <br>ADM</p>
+            </section>
 
+        </div>
+    </div>
+
+    <section id="link">
+        <a id="at" href="#">Teste Vocacional</a>
+        <a id="at" href="#sec2">Mapa Escolar</a>
+        <a id="at" href="#sec3">Sobre os Cursos</a>
+        <a id="at" href="#sec4">Sobre a Escola</a>
+    </section>
+</nav>
+
+<section id="sec1">
+    <br>
+    <br>
+    <h2 id="tv">Teste Vocacional</h2>
+    <p><strong>Preocupado com o futuro pois não sabe que curso seguir? Faça o nosso teste e descubra! ;D</strong></p>
+    <p>Clique nas opções em que mais se identificar e se surpreenda!</p>
+
+    <div class="container">
+        <h1>TESTE</h1>
+        <form id="quizForm">
+          <div class="question">
+            <p>1. Qual lugar de trabalho combina mais com voce?</p>
+            <input type="radio" name="q1" value="a"> Na natureza<br>
+            <input type="radio" name="q1" value="b"> Escritórios<br>
+            <input type="radio" name="q1" value="c"> Em laboratórios<br>
+            <input type="radio" name="q1" value="d"> Em hospitais<br>
+          </div>
+          <div class="question">
+            <p>2. Qual atividade você se sente mais confortável realizando?</p>
+            <input type="radio" name="q2" value="a"> Resolver problemas matemáticos ou lógicos<br>
+            <input type="radio" name="q2" value="b"> Explorar diferentes lugares e ambientes<br>
+            <input type="radio" name="q2" value="c"> Trabalhar em equipe para alcançar um objetivo comum<br>
+            <input type="radio" name="q2" value="d"> Cuidar de pessoas<br>
+          </div>
+          <button type="button" onclick="calculateResult()">Mostrar Resultado</button>
+        </form>
+        <div id="result" style="display: none;"></div>
+        <button onclick="resetQuiz()">Refazer o Teste</button>
+      </div>
+    
+      <script>function calculateResult() {
+        var q1 = document.querySelector('input[name="q1"]:checked').value;
+        var q2 = document.querySelector('input[name="q2"]:checked').value;
+        var result = "";
+      
+        if (q1 === 'b' && q2 === 'a') {
+          result = "Você pode ter interesse em informática"; //ok info
+        } else if (q1 === 'a' && q2 === 'b') {
+          result = "Você ter interesse em turismo"; //ok turismo
+        } else if (q1 === 'b' && q2 === 'c') {
+          result = "Você pode ter interesse em administração";//ok adm
+        } else if (q1 === 'c' && q2 === 'a') { 
+          result = "Você pode ter interesse em eletrotécnica"; //ok eletro
+        } else if (q1 === 'd' && q2 === 'd') { 
+          result = "Você pode ter interesse em análises clínicas"; //ok analises
+        } else {
+          result = "Suas respostas indicam uma variedade de interesses. Considere explorar diferentes áreas antes de tomar uma decisão.";
+        }
+      
+        document.getElementById('result').textContent = result;
+        document.getElementById('result').style.display = 'block';
+      }
+      
+      function resetQuiz() {
+        document.getElementById('quizForm').reset();
+        document.getElementById('result').style.display = 'none';
+      }
+      </script>
+</section>
+
+</body>
+</html>
