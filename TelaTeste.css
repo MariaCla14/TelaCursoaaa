@@ -1,415 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TelaTeste.css"/>
+    <title>Guia JK</title>
+</head>
+<body>
+<nav>
+  <a href="TelaHome.php"><p id="guia">Guia</p></a>
+  <a href="TelaHome.php"><h1 id="jk">JK</h1></a>
+    <div class="dropdown dropdown1">
+        <img id="imgPerfil" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA0ZJREFUSEvllk2IHFUQx///6p5NVARj9LQXySFIdro3aKKC4EdIyJJcFD8w4klBoiKJehBBt1+vITkEox5MCIIXJeIHiIiGKKJgLtEVs9MzEsWb4kGiSMAFk+4q0z2zOLM7s92zI+TguzX96v+rqldV7xGXaPEScTE0+N37zDvzI0JV3Vw4rfL1hg1I7n+P2TBBDAWOw/QeM74KYHwR5GfCnowS/8Oq8MpgF2QvA9hbInzIJd4zVeCVwHH9wjajfNoWtG9Ie87E/zb/oqY3mvEAwCL1VN0StWpflMErgV2gnwG2FUAClU2uxfPdwm7CxiA6CyAw8HicyI6RwQ4mCPQvAKtBPOEa3uF+oi7MHofhNQDnkMgaB+py8NKIo7qFpM4VSYbtjBP/k36CUZDuIPhxp9InXIvfjwTeN2njqeovxfnRHowa/tv9BOMw3WXGY4WDvozH3/HXkcC5sQuy3wFcDWBg1boge+limp+G4axreteOfMYd8IsAnjcgE9rdUcP/qKe4gvQuA98n4BkQxYk389+Ar7PVuFJbANa1O8pOgpw1oEZYAPC2DugHqISLq76fE6XFtWDUKbK38pYZEE0iIrum55g7WLoqg4uUw4SBPqbG7aDdcjH9KYyzInbcGnK0rIW6vRkKXBrGEBsqgfdfb2vPj2W3QnkzyE2AruplyN8wm4XYKWTeSdfiH2U+LAt2G+0qpHoQxCN5G5eJdf4biKM2L8/GP/HcIJuBYi5M74XyCIhruoznAcunWM+sBjAGcBLA5V17f6PZ7qjpf1C5qmcmbLOKnuqK8g2BvPJCgiZB6ydkMLo6AlL3AHh4IXozuSluMr9AetaSiDs3TQJgPYB5oUxNN/hVxTQX22YCu12h+UzPM3AGKpOLe3spOMgOAXgqFyDs0SjxXx8G+m/fZ7tJHOl8Lxm1S8BRkM0TuMyMJ+KmTK0EumDjAv0csC155lziXTGwj4u2qenZIlqzB6Km/84o4KiePkTyzULDkzXuNP9c0OuJ2IV2A0zbTxrRqWiudmIkcNcdLZBwOmFeO8XqBdcv3AFK+71keqdr1r4cBeyW0esFFwMj3VjAfP90d2pW4kB7APXXqzqNVsJd1ub/B/4Hxio/Ljwd+MgAAAAASUVORK5CYII="/>
+        <div class="dropdown-content">
+            <div class="btn"><p id="pf"><a href="Telalogin.php">Login</a></p></div>
+            <div class="btn"><p id="pf"><a href="TelaCadastro.php">Cadastrar-se</a></p></div>
+            <section id="secdd">
+                <p id="pi">Entrar como <br>ADM</p>
+            </section>
 
-#guia {
-    position: absolute;
-    font-family: "PT Sans", sans-serif;
-    color: rgb(0, 0, 0);;
-    margin: 0;
-    font-size: 50px;
-    right: 85%;
-    margin-top: 7px;
-  }
-  #jk {
-    position: absolute;
-  
-    color: rgb(128, 45, 253);
-    margin: 0;
-    font-size: 50px;
-    right: 81%;
-    margin-top: 7px;
-  }
-  #tvbt {
-    background-color: white;
-    color: rgb(128, 45, 253);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    height: 7%;
-    width: 30%;
-    z-index: 2;
-  }
-  #mpbt {
-    background-color: rgb(128, 45, 253);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    height: 7%;
-    width: 30%;
-    z-index: 1;
-  }
-  #scbt {
-    background-color: white;
-    color: rgb(128, 45, 253);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    height: 7%;
-    width: 30%;
-    z-index: 1;
-  }
-  #sebt {
-    background-color: rgb(128, 45, 253);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    height: 7%;
-    width: 30%;
-    z-index: 1;
-  }
-  #tv {
-  font-size: 60px;
-  }
-  #mp {
-    font-size: 60px;
-  }
-  #sc {
-    font-size: 60px;
-  }
-  #se {
-    font-size: 60px;
-  }
-  nav {
-    position: fixed;
-    background-color: white;
-    color: #fff;
-    padding: 3px;
-    text-align: center;
-    height: 70px;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  #link {
-    
-    margin-top: 30px;
-  }
-  
-  #anosso{
-    font-size: 0px;
-    color: rgb(156, 90, 255);
-    text-decoration: none;
-    margin: 0 10px;
-    position: absolute;
-  }
-  
-  #sec1 {
-    background-color: rgb(156, 90, 255);
-    padding: 40px;
-    text-align: center;
-    color: white;
-  
-  }
-  #sec2 {
-    
-    background-color: white;
-    padding: 40px;
-    text-align: center;
-    color: rgb(255, 255, 255);
+        </div>
+    </div>
 
-  #img {
-    width: 100;
-  }
+    <section id="link">
+        <a id="at" href="#">Teste Vocacional</a>
+        <a id="at" href="MapaEscolar.html">Mapa Escolar</a>
+        <a id="at" href="TelaCursos.html">Sobre os Cursos</a>
+        <a id="at" href="SobreEscola.html">Sobre a Escola</a>
+    </section>
+</nav>
 
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+<section id="sec1">
+    <br>
+    <br>
+    <h2 id="tv">TESTE VOCACIONAL</h2>
+    <p><strong>Preocupado com o futuro pois não sabe que curso seguir? Faça o nosso teste e descubra! ;D</strong></p>
+    <p>Clique nas opções em que mais se identificar e se surpreenda!</p>
 
-  .dropdown {
-    right: 0%;
-    position: absolute;
-    display: inline-block;
-  }
-  
-  .dropdown1 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 20px;
-    border: 5px solid rgb(128, 45, 253);
-   
-    right: 15px; /* adicionado */
-    top: 60px; /* adicionado */
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  #pf{
-  color: rgb(156, 90, 255); 
-  font-size: 19px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  
-  
-  #pi{
-    text-align: center;
-    color: white;
-  }
-  #secdd{
-    height: 100%;
-    width: 100%;
-    border-radius: 15px;
-    text-align: center;
-  background-color: rgb(156, 90, 255);
-  }
-  
-  #ttvc{
-    background-color: rgb(156, 90, 255);
-    height: 200px;
-   border-radius: 15px;
-  }
-  #dp{
-    color: rgb(128, 45, 253);
-    margin: 0;
-    font-size: 20px;
-    right: 81%;
+    <div class="container">
+        <h1>TESTE</h1>
+        <form id="quizForm">
+          <div class="question">
+            <p>1. Qual lugar de trabalho combina mais com voce?</p>
+            <input type="radio" name="q1" value="a"> Na natureza<br>
+            <input type="radio" name="q1" value="b"> Escritórios<br>
+            <input type="radio" name="q1" value="c"> Em laboratórios<br>
+            <input type="radio" name="q1" value="d"> Em hospitais<br>
+          </div>
+          <div class="question">
+            <p>2. Qual atividade você se sente mais confortável realizando?</p>
+            <input type="radio" name="q2" value="a"> Resolver problemas matemáticos ou lógicos<br>
+            <input type="radio" name="q2" value="b"> Explorar diferentes lugares e ambientes<br>
+            <input type="radio" name="q2" value="c"> Trabalhar em equipe para alcançar um objetivo comum<br>
+            <input type="radio" name="q2" value="d"> Cuidar de pessoas<br>
+          </div>
+          <button type="button" onclick="calculateResult()">Mostrar Resultado</button>
+        </form>
+        <div id="result" style="display: none;"></div>
+        <button onclick="resetQuiz()">Refazer o Teste</button>
+      </div>
     
-    margin-top: 7px;
-    
-  }
-  #de{
-    color: white;
-    margin: 0;
-    font-size: 17px;
-    right: 81%;
-    
-    margin-top: 7px;
-    
-  }
-  
-  .btn:hover{
-    background-color: rgba(0, 0, 0, 0.207);
-  }
-  .janela-modal{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.474);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-  }
-  
-  .modal{
-    height: 300px;
-    width: 500px;
-    min-width: 450px;
-    min-height: 200px;
-    background-color: rgba(255, 255, 255, 0.571);
-    backdrop-filter: blur(10px);
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  .fechar{
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width:30px ;
-    height: 30px;
-    border-radius: 50%;
-    border: 0;
-    background-color: red;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  .janela-modal.abrir {
-    display:flex;
-  }
-  
-  @keyframes abrirModal {
-    from{
-      opacity: 0;
-      transform: translate3d(0,-20px,-5px);
-    }
-    to{
-      opacity: 1;
-      transform: translate3d(0,0,0);
-    }
-  }
-  
-  .abrir .modal{
-    animation: abrirModal 0.5s; 
-  }
-  
-  #cortxt{
-    color:black;
-    font-family:  sans-serif;
-    font-size: 60px;
-  }
-  
-  .janela-modal2{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.474);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-  }
-  
-  .modal2{
-    width: 500px;
-    min-width: 450px;
-    min-height: 200px;
-    background-color: rgba(255, 255, 255, 0.571);
-    backdrop-filter: blur(10px);
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-    
-  }
-  .fechar2{
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width:30px ;
-    height: 30px;
-    border-radius: 50%;
-    border: 0;
-    background-color: red;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  .janela-modal2.abrir2 {
-    display:flex;
-  }
-  
-  #pa{
-    color: #fff;
-    position: absolute;
-    background-color: black;
-    width: 200px;
-    height: 50px;
-    right: 35%;
-    top:83%;
-    border-radius: 20px;
-  }
-  
-  #pad{
-    color: #fff;
-    position: absolute;
-    background-color: black;
-    width: 200px;
-    height: 50px;
-    right: 35%;
-    top:87%;
-    border-radius: 20px;
-  }
-  
-  #cem {
-    height: 3%;
-    width: 60%;
-    padding: 10px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    padding: 20px;
-    border: 2px solid rgba(255,255,255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0px 0px 10px rgba(0,0,0, .2);
-  }
-  
-  #imgEmail{
-    position: absolute;
-    top:48%;
-    right: 25%;
-  }
-  #imgConfirma{
-    position: absolute;
-  top: 76%;
-    right: 24%;
-  }
-  #at{
-    position: relative;
-  }
-  #at::after{
-    content: "";
-    width: 100%;
-    height: 100px;
-    background-color: rgb(128, 45, 253);
-    z-index: 100;
-  }
-  a {
-    
-    
-    font-size: 18px;
-    color: rgb(156, 90, 255);
-    
-    margin: 0 10px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    color: rgb(156, 90, 255);
-  }
-  
-  .question {
-    margin-bottom: 20px;
-    text-align: left;
-    color:rgb(156, 90, 255);
-  }
-  
-  .question p {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color:rgb(156, 90, 255);
-  }
-  
-  .question input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #9219ae;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #9219ae;
-  }
+      <script>function calculateResult() {
+        var q1 = document.querySelector('input[name="q1"]:checked').value;
+        var q2 = document.querySelector('input[name="q2"]:checked').value;
+        var result = "";
+      
+        if (q1 === 'b' && q2 === 'a') {
+          result = "Você pode ter interesse em informática"; //ok info
+        } else if (q1 === 'a' && q2 === 'b') {
+          result = "Você ter interesse em turismo"; //ok turismo
+        } else if (q1 === 'b' && q2 === 'c') {
+          result = "Você pode ter interesse em administração";//ok adm
+        } else if (q1 === 'c' && q2 === 'a') { 
+          result = "Você pode ter interesse em eletrotécnica"; //ok eletro
+        } else if (q1 === 'd' && q2 === 'd') { 
+          result = "Você pode ter interesse em análises clínicas"; //ok analises
+        } else {
+          result = "Suas respostas indicam uma variedade de interesses. Considere explorar diferentes áreas antes de tomar uma decisão.";
+        }
+      
+        document.getElementById('result').textContent = result;
+        document.getElementById('result').style.display = 'block';
+      }
+      
+      function resetQuiz() {
+        document.getElementById('quizForm').reset();
+        document.getElementById('result').style.display = 'none';
+      }
+      </script>
+</section>
 
-  #result {
-    color: rgb(156, 90, 255);
-  }
-  
-  
+</body>
+</html>
