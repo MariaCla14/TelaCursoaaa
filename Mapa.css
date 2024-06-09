@@ -405,3 +405,19 @@
     border-radius: 6px; 
     height: 400px;
 }
+
+#me {
+  max-width: 100%; 
+    margin-right: 20px;
+    width: 60%; 
+    border-radius: 6px; 
+    height: 500px;
+}
+
+#xi {
+  max-width: 100%; 
+    margin-right: 20px;
+    width: 60%; 
+    border-radius: 6px; 
+    height: 500px;
+}
